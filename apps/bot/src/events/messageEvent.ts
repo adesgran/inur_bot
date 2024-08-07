@@ -17,5 +17,9 @@ export const handleMessageEvent = (bot:Bot, messageQueue:MessageQueue) => {
         {
             messageQueue.say(broadcasterName, "Terrible");
         }
+        else if (/^(blbl)+$/.test(text) || /^(bl)+$/.test(text) && (text.match(/bl/g)!.length % 2 === 1))
+        {
+            messageQueue.say(broadcasterName, text);
+        }
     });
 };
