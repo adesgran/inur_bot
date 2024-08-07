@@ -1,0 +1,23 @@
+{
+  "name": "inur",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start:api": "npm --prefix apps/api start",
+    "start:bot": "npm --prefix apps/bot start",
+    "start:front": "npm --prefix apps/front start",
+    "build:api": "npm --prefix apps/api run build",
+    "build:bot": "npm --prefix apps/bot run build",
+    "build:front": "npm --prefix apps/front run build",
+    "build": "npm run build:api && npm run build:bot && npm run build:front",
+    "start": "npm run build && npm run start:api && npm run start:bot && npm run start:front"
+  },
+  "workspaces": [
+    "apps/api",
+    "apps/bot",
+    "apps/front"
+  ],
+  "author": "adesgran",
+  "license": "ISC"
+}
