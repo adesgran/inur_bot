@@ -80,7 +80,7 @@ interface CommandModule {
         });
     };
 
-    setInterval(sendRandomMessage, 600000);
+    setInterval(sendRandomMessage, 900000);
     handleEmoteOnlyToggleEvent(bot, messageQueue);
     handleMessageEvent(bot, messageQueue);
     handleRaidEvent(bot, messageQueue);
