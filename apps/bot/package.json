@@ -10,18 +10,25 @@
   "author": "adesgran",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.18.0",
     "@twurple/auth": "^7.1.0",
     "@twurple/chat": "^7.1.0",
     "@twurple/easy-bot": "^7.1.0",
+    "@types/node": "^22.1.0",
+    "better-sqlite3": "^11.1.2",
     "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
+    "sqlite3": "^5.1.7",
     "twurple": "^1.0.0",
     "url": "^0.11.4"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/sqlite3": "^3.1.11",
     "nodemon": "^2.0.15",
     "pm2": "^5.1.2",
+    "prisma": "^5.18.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }

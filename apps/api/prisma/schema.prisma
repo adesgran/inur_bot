@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Broadcaster {
+  id          Int          @id @default(autoincrement())
+  twitchId    String       @unique
+  name        String
+  userData    BroadcasterUserData[]
+}
+
+model User {
+  id            Int          @id @default(autoincrement())
+  twitchId      String       @unique
+  name          String
+  accessToken   String?
+  refreshToken  String?
+  tokenExpiry   DateTime?
+  twitchUsername String?
+  userData      BroadcasterUserData[]
+}
+
+model BroadcasterUserData {
+  id              Int        @id @default(autoincrement())
+  broadcasterId   Int
+  userId          Int
+  rouletteScore   Int        @default(0)
+  rouletteRecord  String     @default("")
+
+  broadcaster     Broadcaster @relation(fields: [broadcasterId], references: [id])
+  user            User        @relation(fields: [userId], references: [id])
+
+  @@unique([broadcasterId, userId])
+}
