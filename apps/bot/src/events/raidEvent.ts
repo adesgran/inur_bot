@@ -16,7 +16,7 @@ export const handleRaidEvent = (bot:Bot, messageQueue:MessageQueue) => {
         else if (userName.toLowerCase() === "lunijune") {
             messageQueue.say(broadcasterName, `Merci Luni pour le raid de ${viewerCount} viewers, comment vous allez les lunes ? <3`);        
         }
-        else if (userName.toLowerCase() === "benar_") {
+        else if (userName.toLowerCase() === "benar__") {
             messageQueue.say(broadcasterName, `MAIS NOOON !!! Merci pour le raid Benar, on se connait même pas !`);
             messageQueue.say(broadcasterName, `Comment ça va PATWON ?? <3`);        
         }
