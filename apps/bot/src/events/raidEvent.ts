@@ -32,6 +32,11 @@ export const handleRaidEvent = (bot:Bot, messageQueue:MessageQueue) => {
             messageQueue.say(broadcasterName, `DONNEZ-MOI UN C, DONNEZ-MOI UN H, DONNEZ-MOI UN R, DONNEZ-MOI....`); 
             messageQueue.say(broadcasterName, `J'arrête, c'est chiant Kappa`);        
         }
+        else if (userName.toLowerCase() === "matanotv") {
+            messageQueue.say(broadcasterName, `ALLEZ L'OM !!!!`);
+            messageQueue.say(broadcasterName, `Oups, je me suis trompé....`);
+            messageQueue.say(broadcasterName, `Merci Mata pour le raid de ${viewerCount} viewers ! <3`)
+        }
         else {
             messageQueue.say(broadcasterName, `Merci ${userName} pour le raid de ${viewerCount} viewers ! <3`);
         }
