@@ -9,15 +9,18 @@ type MessageEventParams = {
 
 export const handleMessageEvent = (bot:Bot, messageQueue:MessageQueue) => {
     bot.onMessage(({broadcasterName, userName, text}: MessageEventParams) => {
+        let rng = !(Math.floor(Math.random() * 6));
         if (text.toLowerCase().includes("babengs") || text.toLowerCase().includes("babinks"))
         {
-            messageQueue.say(broadcasterName, "BABINKS");
+            if (rng)
+                messageQueue.say(broadcasterName, "BABINKS");
         }
         else if (text.toLowerCase().includes("terrible"))
         {
-            messageQueue.say(broadcasterName, "Terrible");
+            if (rng)
+                messageQueue.say(broadcasterName, "Terrible");
         }
-        else if (/^(blbl)+$/.test(text) || /^(bl)+$/.test(text) && (text.match(/bl/g)!.length % 2 === 1))
+        else if (/^(blbl)+$/.test(text) || /^(bl)+$/.test(text) && (text.match(/bl/g)!.length % 2 === 1) && text.length > 2)
         {
             messageQueue.say(broadcasterName, text);
         }
