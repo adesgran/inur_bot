@@ -85,5 +85,5 @@ interface CommandModule {
     handleMessageEvent(bot, messageQueue);
     handleRaidEvent(bot, messageQueue);
     handleSubEvent(bot, messageQueue);
-    handleSubGiftEvent(bot, messageQueue);
+    //handleSubGiftEvent(bot, messageQueue);
 })();
