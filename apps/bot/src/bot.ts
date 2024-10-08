@@ -19,6 +19,7 @@ import { inurCommandName, inurHandler, inurOptions } from './commands/main/inur'
 import dotenv from 'dotenv';
 
 dotenv.config();
+console.log(process.env.CHANNELS);
 
 const channels = process.env.CHANNELS!.split(' ');
 
